@@ -1,13 +1,28 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.selected {
+  @apply text-indigo-800 ;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.coins img {
+  width: 80px ;
+  height: auto ; 
+}
+
+.deskripsi a{
+ @apply text-blue-600 underline;
+}
+
+@media only screen and (max-width: 990px){
+  .selected {
+    @apply bg-blue-500 text-white ;
+  }
+
+  .coins img {
+    width: 35px ;
+    height: auto ; 
+  }
+  
 }
