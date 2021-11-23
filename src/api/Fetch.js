@@ -6,13 +6,11 @@ const Fetch = (url) => {
     let [loadingstat ,setLoadingstat] = useState(true)
 
     useEffect(()=> {
-        setInterval(() => {      
             axios.get(url)
             .then(res => {
                 setResult(res.data)
                 setLoadingstat(false)
             })
-          }, 2000);
     },[])
 
    

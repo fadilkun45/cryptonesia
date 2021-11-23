@@ -18,35 +18,41 @@ const Navbar = () => {
 
     return (
         <>
-        <nav className={navscroll ? 'w-full flex flex-row justify-between px-2 lg:px-5 py-2 text-indigo-500 lg:bg-white bg-indigo-500 fixed top-0' : 'w-full flex flex-row justify-between px-2 lg:px-5 py-2 text-indigo-500 lg:bg-white bg-indigo-500' }>
+
+        <nav className={navscroll ? 'w-full flex flex-row justify-between px-2 lg:px-5 py-2 text-white bg-green-600 items-center transition duration-700 fixed top-0' : 'w-full flex flex-row justify-between px-2 lg:px-5 py-2 items-center text-green-600 lg:bg-white bg-indigo-500 transition duration-700' }>
            <div className="w-5/6 mx-auto flex justify-between">
-           <div className="w-full lg:w-5/6 lg:text-indigo-500 text-white">
+           <div className="w-full lg:w-3/5">
                 <Link to="/">
                 <h1 className="text-xl lg:text-3xl font-bold">cryptonesia</h1>
                 </Link>
             </div>
-            <div className="nav-link w-2/6 justify-between text-lg hidden lg:flex ">
-                <NavLink exact={true} to="/" activeClassName="selected">
-                    home
+            <div className="nav-link w-2/5 justify-around text-lg hidden lg:flex ">
+                <NavLink exact={true} to="/" activeClassName="selected" className="font-bold">
+                    Home
                 </NavLink>
-                <NavLink to="/news" activeClassName="selected">
-                    news
+                <NavLink to="/crypto" activeClassName="selected" className="font-bold">
+                    Crypto
                 </NavLink>
-                <NavLink to="/calculator" activeClassName="selected">
-                    calculator
+                <NavLink to="/news" activeClassName="selected" className="font-bold">
+                    News
                 </NavLink>
-                <NavLink to="/about" activeClassName="selected">
-                    about
+                <NavLink to="/calculator" activeClassName="selected" className="font-bold">
+                    Calculator
+                </NavLink>
+                <NavLink to="/about" activeClassName="selected" className="font-bold">
+                    About
                 </NavLink>
             </div>
            </div>
         </nav>
-   
-   <nav className="fixed flex lg:hidden flex mx-auto flex justify-between px-5 py-2  fixed bottom-0 left-0 right-0 w-full z-10 bg-white">
+
+   {/* mobile nav */}
+    <nav className="fixed flex lg:hidden flex mx-auto flex justify-between px-5 py-2  fixed bottom-0 left-0 right-0 w-full z-10 bg-white">
    <div className="nav-link w-full flex justify-between text-lg">
 
        <NavLink exact={true} to="/" activeClassName="selected" className="flex flex-col items-center  px-2 py-1 text-xs">
        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            
            home
        </NavLink>
 
@@ -65,7 +71,7 @@ const Navbar = () => {
            about
        </NavLink>
    </div>
-</nav>
+    </nav>
     </>
    )
 }
