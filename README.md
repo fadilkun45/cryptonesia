@@ -1,7 +1,7 @@
 # cryptonesia App
 <p>a simple tool about crypto</p>
 
-# about this tool
+# about this App
 
 <p>aplikasi ini dapat digunakan untuk mengetahui harga cryptocurrency dan juga berita tebaru tentang cryptocurrency </p>
 
