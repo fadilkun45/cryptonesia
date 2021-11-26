@@ -21,15 +21,15 @@ const Coins = () => {
     }
 
     return (
-        <div className="w-5/6 mx-auto px-4 py-5 border rounded-md bg-green-500 text-white mt-10">
+        <div className="w-full md:w-5/6 mx-auto px-4 py-5 border rounded-md bg-green-500 text-white mt-10">
         <h2 className=" font-bold text-center text-base lg:text-4xl mb-3">cari crypto</h2>
 
             {isFetching ? 
             <div className="w-full lg:w-5/6  flex px-5 py-2 mx-auto" >
                  <SkeletonLoad limit={1} image={false} />
-            </div> :  <input type="text"  className="w-full lg:w-5/6  flex px-5 py-2 border mx-auto outline-none border-3 border-white text-black  rounded-md" onKeyUp={onSearch} placeholder="cari berdasarkan kode contoh btc"/>}
+            </div> :  <input type="text"  className="w-full lg:w-5/6  flex px-1 md:px-5 py-2 border mx-auto outline-none border-3 border-white text-black  rounded-md" onKeyUp={onSearch} placeholder="cari berdasarkan kode contoh btc"/>}
 
-            <div className="w-full lg:w-5/6 mx-auto mt-6 rounded-md  bg-white px-4 py-3">
+            <div className="w-full lg:w-5/6 mx-auto mt-6 rounded-md  bg-white px-2 md:px-5 py-3">
                 {
                     isFetching && <SkeletonLoad limit={6} image={true} />
                 }

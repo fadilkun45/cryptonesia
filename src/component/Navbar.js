@@ -19,7 +19,7 @@ const Navbar = () => {
     return (
         <>
 
-        <nav className={navscroll ? 'w-full flex flex-row justify-between px-2 lg:px-5 py-2 text-white bg-green-600 items-center transition duration-700 fixed top-0' : 'w-full flex flex-row justify-between px-2 lg:px-5 py-2 items-center text-green-600 lg:bg-white transition duration-700' }>
+        <nav className={navscroll ? 'w-full flex flex-row justify-between px-2 lg:px-5 py-2 text-white bg-green-600 items-center transition duration-700 fixed top-0 z-10' : 'w-full flex flex-row justify-between px-2 lg:px-5 py-2 items-center text-green-600 lg:bg-white transition duration-700' }>
            <div className="w-5/6 mx-auto flex justify-between">
            <div className="w-full lg:w-3/5">
                 <Link to="/">
