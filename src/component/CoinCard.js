@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 const CoinCard = ({image,rank,name,symbol,price,priceChange,volume,id}) => {
     return (
         <Link to={'/detail/' + id} className="coins hover:bg-green-700 transition duration-150 bg-green-600 mb-1 px-4 py-3 w-full flex items-center justify-between px-3 py-2 my-2 text-center">
-            <div className="w-2/6 lg:w-1/6 flex justify-between items-center">
-                <div className="w-2/6 lg:w-1/6">
+            <div className="w-2/6  lg:w-1/6 flex justify-between items-center">
+                <div className="w-2/6 lg:w-1/6 flex  ">
                 <p className="text-xs lg:text-xl text-white font-semibold ">{rank}</p>
                 </div>
-                <div className="w-3/6 lg:w-4/6 flex justify-items-start">
+                <div className="w-3/6 lg:w-4/6 flex justify-items-start md:justify-center ">
                 <img src={image} alt="crypto" className="px-1 py-1 bg-white rounded-full"/>                   
                 </div>
             </div>

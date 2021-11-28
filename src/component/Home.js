@@ -4,6 +4,8 @@ import CurrencyFormat from 'react-currency-format';
 import Title from './Title';
 import SkeletonLoad from './SkeletonLoad';
 import {useGetCryptosQuery} from '../Reducer/cryptoApi';
+import { useGetNewsQuery } from '../Reducer/newsApi';
+import NewsCard from './NewsCard';
 
 import Slider from "react-slick";
 
@@ -17,6 +19,8 @@ const Home = () => {
     const {data: result, isFetching} = useGetCryptosQuery(200)
     const {data: high} = useGetCryptosQuery(200)
     const {data: low} = useGetCryptosQuery(200)
+
+    let {data:newsresult } = useGetNewsQuery({ type:"crypto", count:10 })
 
     let priceBtc = result && result.filter(results => results.symbol.toLowerCase().includes("btc"))
 
@@ -77,7 +81,20 @@ const Home = () => {
         </div>
         </div>
         </Slider>
-   
+                
+        <div className="flex mx-auto w-5/6  flex-wrap mt-16 rounded-md bg-green-500 px-4 py-3 text-white flex-col ">
+            <h2 className=" font-bold text-center text-base lg:text-2xl mb-3">latest news</h2>
+
+            {
+                isFetching && <SkeletonLoad limit={4} image={false} />
+            }
+            {
+                newsresult && newsresult["value"].map(newsres => (
+                <NewsCard key={newsres.url} title={newsres.name} desc={newsres.description} url={newsres.url} creator={newsres["provider"][0]["name"]} img={newsres.thumbnail}  date={newsres.datePublished}/>
+                ))
+            }
+        </div>
+
           
         {/* <div className="w-full lg:w-5/6 mx-auto px-1 md:px-4 py-5 border rounded-md bg-green-500 text-white mt-10">
         <h2 className=" font-bold text-center text-base lg:text-2xl mb-3">Top 5 high change price</h2>
