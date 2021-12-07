@@ -1,7 +1,6 @@
 import React,{useEffect, useState,} from 'react'
 import SkeletonLoad from './SkeletonLoad'
 import CoinCard from './CoinCard'
-import Fetch from '../api/Fetch'
 import { useGetCryptosQuery } from '../Reducer/cryptoApi'
 import Title from './Title'
 
