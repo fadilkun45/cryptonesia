@@ -80,7 +80,7 @@ const DetailCoins = () => {
                         <p className="text-base mt-1 text-center md:text-left">kode koin : {coinDetail?.symbol}</p>
                         <div className="flex mt-2 flex-col lg:flex-row whitespace-nowrap">
                             <p className="text-base mb-1 text-center text-center lg:w-1/5">market cap rank : {coinDetail?.market_cap_rank}</p>
-                            <p className="text-base mb-1 text-center md:mx-7 lg:w-1/5">coincegko rank : {coinDetail?.market_casp_rank}</p>
+                            <p className="text-base mb-1 text-center md:mx-7 lg:w-1/5">coincegko rank : {coinDetail?.coingecko_rank}</p>
                             <p className="text-base mb-1 text-center lg:w-1/5">alexa rank : {coinDetail?.public_interest_stats?.alexa_rank} </p>
                         </div>
                     </div>
