@@ -3,12 +3,15 @@ import SkeletonLoad from './SkeletonLoad'
 import CoinCard from './CoinCard'
 import Fetch from '../api/Fetch'
 import { useGetCryptosQuery } from '../Reducer/cryptoApi'
+import Title from './Title'
 
 const Coins = () => {
   const {data: result, isFetching} = useGetCryptosQuery(200)
+
+  Title("cryptonesia | cryptocurrencies")
     
     useEffect(() => {
-        console.log(result)
+        // console.log(result)
     },[result])
   
 
@@ -21,7 +24,7 @@ const Coins = () => {
     }
 
     return (
-        <div className="w-full md:w-5/6 mx-auto px-4 py-5 border rounded-md bg-green-500 text-white mt-10">
+        <div className="w-full md:w-5/6 mx-auto px-4 py-5 border mb-20 rounded-md bg-green-500 text-white mt-10">
         <h2 className=" font-bold text-center text-base lg:text-4xl mb-3">cari crypto</h2>
 
             {isFetching ? 
@@ -41,7 +44,7 @@ const Coins = () => {
                 }
 
                 {
-                    filteredResult == 0 ? ( <div className="text-center text-indigo-500 font-bold text-base">coin yang anda cari tidak ada</div> ) : ("") 
+                    filteredResult == 0 ? ( <div className="text-center text-green-500 font-bold text-base">coin yang anda cari tidak ada</div> ) : ("") 
                 }
             </div>
         </div>

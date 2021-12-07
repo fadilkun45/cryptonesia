@@ -13,16 +13,21 @@
 }
 
 .deskripsi a{
- @apply text-blue-600 underline;
+ @apply text-green-600 underline;
 }
+
+.deskripsi span{
+  @apply text-green-600 font-bold;
+ }
+ 
 
 @media only screen and (max-width: 990px){
   .selected {
-    @apply bg-blue-500 text-white ;
+    @apply bg-white text-green-600 ;
   }
 
   .coins img {
-    width: 20px ;
+    width: 29px  ;
     height: auto ; 
   }
   

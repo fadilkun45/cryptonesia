@@ -2,7 +2,7 @@ import moment from 'moment'
 
 const NewsCard = ({title,desc,creator,url,date}) => {
     return (
-        <a href={url} target="_blank" className="transform hover:scale-110 text-green-600 hover:text-white hover:bg-green-800 rounded-md bg-white w-5/6 mx-auto px-3 py-2 mb-4 duration-300 transition">
+        <a href={url} target="_blank" className="transform hover:scale-110 text-green-600 hover:text-white hover:bg-green-800 rounded-md bg-white q-full md:w-5/6 mx-auto px-3 py-2 mb-4 duration-300 transition">
             <h4 className="font-bold  text-sm md:text-base lg:text-lg">{title.length <= 150 ?  title : title.slice(0,150) + '...'    }</h4>
             <p className="text-xs md:text-sm  mt-1">{desc.length <= 300 ?  desc : desc.slice(0,300) + '...'}</p>
             <div className="flex flex-col md:flex-row justify-between mt-2">

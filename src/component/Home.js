@@ -20,7 +20,7 @@ const Home = () => {
     const {data: high} = useGetCryptosQuery(200)
     const {data: low} = useGetCryptosQuery(200)
 
-    let {data:newsresult } = useGetNewsQuery({ type:"crypto", count:10 })
+    let {data:newsresult ,isFetching:newsFetching } = useGetNewsQuery({ type:"crypto", count:10 })
 
     let priceBtc = result && result.filter(results => results.symbol.toLowerCase().includes("btc"))
 
@@ -39,16 +39,16 @@ const Home = () => {
       };
 
     return (
-         <div className="container md:mx-auto mt-5 md:mb-10">
-           <div className="mx-auto w-5/6 px-4 py-5 border rounded-md bg-green-500 text-white">
+         <div className="container md:mx-auto mt-5 md:mb-10 px-3 py-5 overflow-x-hidden mb-20">
+           <div className="mx-auto w-full md:w-5/6 px-4 py-5 border rounded-md bg-green-500 text-white">
             <h2 className=" font-bold text-center text-xl lg:text-3xl">Selamat Datang Di cryptonesia</h2>
                 <p className=" font-semibold text-center text-base lg:text-xl mt-2">Harga BTC hari ini : <CurrencyFormat value={result && priceBtc[0].current_price} displayType={'text'} thousandSeparator={true} prefix={'Rp.'} /></p>
            </div>
 
-        <Slider {...settings} className="w-5/6 lg:w-full mx-auto mb-32 md:mb-0 cursor-pointer ">
-          <div >
-          <div className="w-full lg:w-5/6 mx-auto px-1 md:px-4 py-5 border rounded-md bg-green-500 text-white mt-10">
-        <h2 className=" font-bold text-center text-base lg:text-2xl mb-3">Top 5 high change price</h2>
+        <Slider {...settings} className="w-full md:w-5/6 lg:w-full mx-auto mb-0 cursor-pointer ">
+        <div>
+        <div className="w-full lg:w-5/6 mx-auto px-1 md:px-4 py-5 border rounded-md bg-green-500 text-white mt-10 relative z-10">
+           <h2 className=" font-bold text-center text-base lg:text-2xl mb-3">Top 5 high change price</h2>
 
             <div className="w-full lg:w-5/6 mx-auto mt-6 rounded-md  bg-white px-2 md:px-4 py-3">
                 {
@@ -62,7 +62,7 @@ const Home = () => {
                 }
             </div>
         </div>
-          </div>
+        </div>
           <div>
           <div className="w-full lg:w-5/6 mx-auto px-1 md:px-4 py-5 border rounded-md bg-green-500 text-white mt-10">
            <h2 className=" font-bold text-center text-base lg:text-2xl mb-3">Top 5 minus change price</h2>
@@ -82,11 +82,12 @@ const Home = () => {
         </div>
         </Slider>
                 
-        <div className="flex mx-auto w-5/6  flex-wrap mt-16 rounded-md bg-green-500 px-4 py-3 text-white flex-col ">
+        <div className="flex mx-auto w-full md:w-5/6  flex-wrap mt-16 rounded-md bg-green-500 px-4 py-3 text-white flex-col ">
             <h2 className=" font-bold text-center text-base lg:text-2xl mb-3">latest news</h2>
 
             {
-                isFetching && <SkeletonLoad limit={4} image={false} />
+                newsFetching && 
+                <SkeletonLoad limit={4} image={false} />
             }
             {
                 newsresult && newsresult["value"].map(newsres => (
