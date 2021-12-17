@@ -28,7 +28,7 @@ const CoinCard = ({image,rank,name,symbol,price,priceChange,volume,id}) => {
             <div className="ml-5 md:ml-0 w-2/6  lg:w-3/6 flex justify-end md:justify-center">
            <div className="md:w-5/6 lg:w-1/5">
            {
-                    priceChange < 0 ? (<p className="text-xs bg-white px-1 py-1 rounded-full lg:text-base text-red-600 font-semibold">{priceChange.toFixed(2)}%</p>) : (<p className="text-xs lg:text-base bg-white px-1 py-1 rounded-full text-green-600 font-semibold">{priceChange.toFixed(2)}%</p>)
+                    priceChange < 0 ? (<p className="text-xs bg-white px-1 py-1 rounded-full lg:text-base text-red-600 font-semibold">{priceChange?.toFixed(2)}%</p>) : (<p className="text-xs lg:text-base bg-white px-1 py-1 rounded-full text-green-600 font-semibold">{priceChange?.toFixed(2)}%</p>)
             }
            </div>
             <div className=" hidden lg:block w-3/5">

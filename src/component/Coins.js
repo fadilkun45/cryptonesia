@@ -10,7 +10,7 @@ const Coins = () => {
   Title("cryptonesia | cryptocurrencies")
     
     useEffect(() => {
-        // console.log(result)
+        console.log(result)
     },[result])
   
 
