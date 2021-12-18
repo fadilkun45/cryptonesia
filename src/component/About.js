@@ -19,7 +19,7 @@ const About = () => {
                <div className="flex w-3/6 mx-auto justify-around mt-2">
 
                <div className="flex mx-auto w-4/6 flex flex-col items-center justify-center">
-                <img src={reactimg} className="w-3/6  animate-spin bg-white rounded-full" alt="reactjs" />
+                <img src={reactimg} className="w-3/6 bg-white rounded-full" alt="reactjs" />
                 </div>
 
                 <div className="flex mx-auto w-4/6  flex flex-col items-center justify-center">
@@ -41,7 +41,7 @@ const About = () => {
 
             <div className="container py-4 px-2 rounded-md md:w-1/6 mt-4 mx-auto bg-green-500">
             <img src={ayank} alt="gambar ayank" className="w-28 mx-auto h-28 object-cover rounded-full" />
-            <p className="text-center text-sm md:text-base text-white mt-4 font-bold">Faldi Ramadhan 2021</p>
+            <p className="text-center text-sm md:text-base text-white mt-4 font-bold">Faldi Ramadhan &copy; 2021</p>
             </div>
         </div>
     )
