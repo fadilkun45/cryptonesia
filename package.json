@@ -8,7 +8,6 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "autoprefixer": "^9.8.6",
     "axios": "^0.21.4",
     "chart.js": "^3.6.0",
     "cors": "^2.8.5",
@@ -16,7 +15,6 @@
     "html-react-parser": "^1.4.0",
     "millify": "^4.0.0",
     "moment": "^2.29.1",
-    "postcss": "^7.0.36",
     "react": "^17.0.2",
     "react-chartjs-2": "^3.3.0",
     "react-currency-format": "^1.0.0",
@@ -30,8 +28,10 @@
     "react-slick": "^0.28.1",
     "react-spinners-kit": "^1.9.1",
     "slick-carousel": "^1.8.1",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.14",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "autoprefixer": "^9.8.8",
+    "postcss": "^7.0.39",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
   },
   "scripts": {
     "start": "craco start",
@@ -56,5 +56,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.8",
+    "postcss": "^7.0.39",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
   }
 }
